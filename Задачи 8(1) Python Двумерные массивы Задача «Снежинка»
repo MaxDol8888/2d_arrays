@@ -1,0 +1,22 @@
+x=int(input())
+a=[['.' for i in range(x)] for i in range(x)]
+a[((x + 1) / 2) - 1] = ['*'] * x
+for i in range(x):
+    a[i][((x + 1) / 2) - 1] = '*'
+    a[i][i] = '*'
+    a[i][(i+1) * -1] = '*'
+    print(' '.join(a[i]))
+    
+    
+n = int(input())
+a = [['.'] * n for i in range(n)]
+for i in range(n):
+    a[i][i] = '*'
+    a[n // 2][i] = '*'
+    a[i][n // 2] = '*'
+    a[i][n - i - 1] = '*'
+for row in a:
+    print(' '.join(row))
+
+
+
