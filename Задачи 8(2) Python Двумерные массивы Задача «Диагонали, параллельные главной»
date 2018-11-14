@@ -1,0 +1,32 @@
+n = int(input())
+
+a = [['.'] * n for i in range(n)]
+
+for i in range(n):
+
+    for j in range(n):
+
+        a[i][j] = abs(i-j)
+
+for row in a:
+
+    print(*row)
+    
+    
+  n = int(input())
+a = [[abs(i - j) for j in range(n)] for i in range(n)]
+for row in a:
+    print(' '.join([str(i) for i in row]))
+
+
+n = int(input())
+
+a = [[int(0)] * n for _ in range(n)]
+
+for i in range(0,n):
+    for j in range(0,n-i):
+        a[j+i][j] = i
+        a[j][j+i] = i
+
+for i in a:
+    print( ' '.join(map(str,i)) )
