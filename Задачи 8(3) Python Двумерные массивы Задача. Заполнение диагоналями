@@ -72,4 +72,74 @@ end. (* End of operators part *)
 http://www.school30.spb.ru/csd/ogt/samp/pas_task_021.htm
 
 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m, pos = 0, row = 0;
+    cin >> n >> m;
+    int a[n][m];
+
+    // обработка
+    int start_row = 0;
+    int number = 1;
+    for (int min_row = 0; min_row < n; min_row++) {
+        if (min_row > 0) start_row = pos - 1;
+        else start_row = 0;
+        for (pos = start_row; pos < m; pos++) {
+            row = min_row;
+            for (int col = pos; col >= 0; col--) {
+                if (row < n) {
+                    a[row][col] = number;
+                    number++;
+                    row++;
+                }
+                else break;
+            }
+        }
+    }
+    // вывод
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (a[i][j] % 10 == a[i][j]) cout << "   ";
+            else if (a[i][j] % 100 == a[i][j]) cout << "  ";
+            else if (a[i][j] % 1000 == a[i][j]) cout << " ";
+            cout << a[i][j];
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+ИМХО решению 11 задачи долеко до идеала. 
+Вот на пример мое:
+#include <iostream>
+using namespace std;
+int main() {
+int n, m, a[100][100], k = 1;
+cin >> n >> m;
+for(int t = 0; t < m + n - 1; t++)
+for(int i = 0; i < n; i++)
+for(int j = 0; j < m; j++)
+if(i + j == t){
+a[i][j] = k;
+k++;}
+for(int i = 0; i < n; i++){
+for(int j = 0; j < m; j++){
+if (a[i][j] % 10 == a[i][j]) cout << " ";
+else if (a[i][j] % 100 == a[i][j]) cout << " ";
+else if (a[i][j] % 1000 == a[i][j]) cout << " ";
+cout << a[i][j];
+}
+cout << endl;
+}
+return 0;
+}
+
+
+http://practice.keyfire.ru/blog/dvuhmernye-massivy-na-c/
+
+
+
 http://cppstudio.com/post/4991/ - Заполнить двумерный массив зигзагом по диагонали
