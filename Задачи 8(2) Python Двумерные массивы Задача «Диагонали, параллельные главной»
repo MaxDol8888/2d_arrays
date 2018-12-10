@@ -1,3 +1,4 @@
+#Hapilin
 n = int(input())
 a = [['.'] * n for i in range(n)]
 for i in range(n):
@@ -14,7 +15,6 @@ for row in a:
 
 
 n = int(input())
-
 a = [[int(0)] * n for _ in range(n)]
 
 for i in range(0,n):
@@ -24,3 +24,13 @@ for i in range(0,n):
 
 for i in a:
     print( ' '.join(map(str,i)) )
+
+
+№Redkach
+n=int(input()) 
+a=[["|"]*n for i in range(n)]
+for i in range(n):
+    for j in range(n):
+        a[i][j]=abs(i-j)
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
