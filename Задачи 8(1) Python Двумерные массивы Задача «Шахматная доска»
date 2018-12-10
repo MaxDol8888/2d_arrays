@@ -1,3 +1,4 @@
+#Netyaga
 m, n = [int(i) for i in input().split()]
 twosym = ['.', '*']
 sdot = [twosym[i%2] for i in range(n)]
@@ -17,3 +18,63 @@ for i in range(n):
             a[i].append('*')
 for row in a:
     print(' '.join(row))
+
+
+#Hapilin
+n, m = input().split()
+a = [['.'] * int(m) for i in range(int(n))]
+for i in range(0,int(n),2):
+    for j in range(0,int(m)):
+        if (j+1) % 2 == 0:
+            a[i][j]='*'
+for k in range(1, int(n), 2):
+    for l in range(0,int(m)):
+        if l % 2 == 0:
+            a[k][l]='*'
+for i in a:
+    print(*i)
+
+
+#Redkach
+n,m=[int(i) for i in input().split()]
+a=[['*']*m for i in range(n)]
+for i in range(n):
+    for j in range(m):
+        if (i+j)%2==0:
+            a[i][j]='.'
+for row in a:
+    print(' '.join([elem for elem in row]))
+
+
+n,m=[int(i) for i in input().split()]
+
+s=[['.' if (i+j)%2==0 else '*' for i in range(m)] for j in range(n)]
+for i in range(n):
+    print(' '.join(s[i][:]))
+
+
+n, m = [int(j) for j in input().split()] 
+a = [['.'] * m for i in range(n)]
+k = -1
+for j in range(n):
+    for i in range(m):
+        if k > 0:
+            a[j][i] = '*'
+        k *= -1
+    if m % 2 == 0 :   
+        k *= -1
+for row in a:
+    print(' '.join(row))
+
+
+n, m = map(int, input().split())
+
+a = [['.'] * m for i in range(n)]
+for i in range (n):
+    for j in range (m):
+        if (i+j) % 2 == 1:
+            a[i][j] = '*'
+for row in a:
+    print(' '.join(row))
+
+
