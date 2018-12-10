@@ -1,3 +1,4 @@
+#Hapilin
 n = int(input())
 sp = [['.'] * n for i in range(n)]
 for t in range(n):
@@ -30,3 +31,19 @@ for row in a:
     print()
 
 
+#Alina
+n = int(input())
+a = [["."] * n for i in range(n)]
+for i in range(n):
+    a[i][(n-1)-i] = 1
+    for j in range(n - i,n):
+        a[i][j] = 2
+    
+for row in a:
+    print(' '.join([str(elem)for elem in row]))
+
+
+n = int(input())
+a = [[0] * (n - i - 1) + [1] + [2] * i for i in range(n)]
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
