@@ -1,3 +1,4 @@
+#Hapilin
 def swap(i,j):
     for z in range(n):
         sp[z][i],sp[z][j]=sp[z][j],sp[z][i]
@@ -23,3 +24,11 @@ swap_columns(a, i, j)
 print('\n'.join([' '.join([str(i) for i in row]) for row in a]))
 
 
+#Alina
+n, m = [int(i) for i in input().split()]
+a = [[int(j) for j in input().split()] for i in range(n)]
+i, j = [int(i) for i in input().split()]
+for x in range(m):
+    a[x][i],a[x][j] = a[x][j],a[x][i]
+for row in a:
+    print(' '.join([str(a) for a in row]))
