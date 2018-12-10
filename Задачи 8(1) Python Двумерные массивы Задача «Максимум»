@@ -1,3 +1,4 @@
+#Netyaga
 n,m = [int(i) for i in input().split()]
 a = [[int(i) for i in input().split()] for j in range(n)]
 b = int(0)
@@ -23,3 +24,31 @@ for i in range(n):
 print(best_i, best_j)
 
 
+#Hapilin
+n, m = input().split()
+sp = []
+for i in range(int(n)):
+    sp.append(input().split())
+max=int(-10000000000000)
+for i in range(int(n)):
+    for j in range(int(m)):
+        k=int(sp[i][j])
+        if k > max:
+            max = k
+            z=i
+            v=j
+print(z,v)
+
+
+mas=input().split()  
+n=int(mas[0])
+m=int(mas[1])
+max_i=0
+max_j=0
+a=[[int(j) for j in input().split()] for i in range(n)]
+for i in range(0,n):
+    for j in range(0,m):
+        if a[i][j]>a[max_i][max_j]:
+            max_i=i
+            max_j=j
+print(max_i,max_j)
