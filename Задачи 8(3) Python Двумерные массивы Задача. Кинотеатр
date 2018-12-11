@@ -1,0 +1,31 @@
+#Hapilin
+N, M = input().split()
+Mesta = [[str(j) for j in input().split()] for i in range(int(N))]
+K = int(input())
+schet4ik = int(0)
+schet4ik2 = False
+for i in range(int(N)):
+    for j in range(int(M)):
+        if Mesta[i][j] == "0":
+            schet4ik += 1
+            if schet4ik == K:
+                print(i + 1)
+                schet4ik2 = True
+                break
+        else:
+            z = int(0)
+if schet4ik2 == False:
+    print("0")
+    
+    
+#Enotov
+n, m = map(int, input().split())
+rows = [input() for _ in range(n)]
+k = int(input())
+ 
+pat = ' '.join('0' * k)
+row = next((i+1 for i, line in enumerate(rows) if pat in line), 0)
+ 
+print(row) 
+
+
