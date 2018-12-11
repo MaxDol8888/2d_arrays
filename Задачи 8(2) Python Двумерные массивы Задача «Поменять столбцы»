@@ -24,6 +24,7 @@ swap_columns(a, i, j)
 print('\n'.join([' '.join([str(i) for i in row]) for row in a]))
 
 
+
 #Alina
 n, m = [int(i) for i in input().split()]
 a = [[int(j) for j in input().split()] for i in range(n)]
