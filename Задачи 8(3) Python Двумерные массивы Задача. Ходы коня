@@ -13,3 +13,19 @@ for row in doska:
     print(*row)
     
     
+#Netyaga
+x, y = list(input())
+x = int(ord(x) - 95)
+y = 8 - int(y)
+ta = [['.' for i in range(10)] for j in range(10)]
+ta[y][x] = 'K'
+ta[y+2][x-1] = '*'
+ta[y+2][x+1] = '*'
+ta[y-2][x-1] = '*'
+ta[y-2][x+1] = '*'
+ta[y+1][x-2] = '*'
+ta[y+1][x+2] = '*'
+ta[y-1][x-2] = '*'
+ta[y-1][x+2] = '*'
+for i in ta[0:-2]:
+    print(*i[2:])
