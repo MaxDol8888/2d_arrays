@@ -19,3 +19,22 @@ for row in zmeika:
 n, m = map(int, input().split())
 for j in range(n):
     print(' '.join(['{:>4}'.format(i + 1 + m * j) for i in range(m)][::pow(-1, j)]))
+
+
+#Netyaga
+a, b = [int(i) for i in input().split()]
+k = [str(i) for i in range(1, (int(a*b) + 1))]
+cc = []
+h = []
+for i in range(a):
+    h = k[0:b]
+    for j in range(b):
+        k.pop(0)
+    if (i%2) == 0:
+        cc.append(h)
+    else:
+        cc.append(list(reversed(h)))
+for i in cc:
+    print(*i)
+        
+        
