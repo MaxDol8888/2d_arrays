@@ -1,0 +1,25 @@
+#Hapilin
+N = int(input())
+Karta = [[int(i) for i in input().split()] for j in range(N)]
+calorii = Karta[N - 1][0]
+idex = N - 1
+idex2 = int(1)
+while idex > 0 and idex2 < N:
+    if Karta[idex - 1][idex2 - 1] > Karta[idex][idex2]:
+        calorii += Karta[idex - 1][idex2 - 1]
+        idex -= 1
+    else:
+        calorii += Karta[idex][idex2]
+        idex2 += 1
+
+while idex == 0 and idex2 <= N-1:
+    calorii += Karta[idex][idex2]
+    idex2 += 1
+    
+while idex2 == N and idex > 0:
+    calorii += Karta[idex - 1][idex2 - 1]
+    idex -= 1
+    
+print(calorii)
+
+
