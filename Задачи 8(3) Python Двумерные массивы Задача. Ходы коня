@@ -1,0 +1,15 @@
+#Hapilin
+y,x=input().split()
+chisla={'a':0,'b':1,'c':2,'d':3,'e':4,'f':5,'g':6,'h':7}
+y = chisla[y]
+x = int(x) - 1 
+doska=[["."]*8 for i in range(8)]
+doska[x][y] = 'K'
+for i in range(8):
+    for j in range(8):
+        if abs(i - y)*abs(j - x) == 2:
+            doska[j][i]='*'
+for row in doska:
+    print(*row)
+    
+    
