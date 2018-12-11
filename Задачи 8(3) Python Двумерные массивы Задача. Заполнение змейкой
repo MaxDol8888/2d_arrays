@@ -1,0 +1,21 @@
+#Hapilin
+n,m = [int(i) for i in input().split()]
+zmeika = [["*"]*m for i in range(n)]
+z = int(1)
+for i in range(n):
+    if i%2 == 0:
+        for j in range(m):
+            zmeika[i][j]=z
+            z+=1
+    else:
+        for j in range(-1,(-m)-1,-1):
+            zmeika[i][j]=z
+            z+=1
+for row in zmeika:
+    print(*row)
+  
+
+#Enotov
+n, m = map(int, input().split())
+for j in range(n):
+    print(' '.join(['{:>4}'.format(i + 1 + m * j) for i in range(m)][::pow(-1, j)]))
