@@ -28,4 +28,3 @@ row = next((i+1 for i, line in enumerate(rows) if pat in line), 0)
  
 print(row) 
 
-
