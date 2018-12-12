@@ -1,0 +1,8 @@
+#Hapilin
+n = int(input())
+m = int(input())
+sp = [[i*j for j in range(m)] for i in range(n)]
+for row in sp:
+    print(*row)
+    
+    
