@@ -1,0 +1,13 @@
+#Hapilin
+n = int(input())
+m = int(input())
+a = int(0)
+sp = [[i + n*j for j in range(m)] for i in range(n)]
+for row in sp:
+    print(*row)
+
+
+#Redkach
+m=int(input())
+n=int(input())
+print([[ j*5+i for j in range(m)] for i in range(n)])
