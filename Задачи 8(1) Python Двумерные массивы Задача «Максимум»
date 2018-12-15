@@ -52,3 +52,35 @@ for i in range(0,n):
             max_i=i
             max_j=j
 print(max_i,max_j)
+
+
+#Sidorov
+n,m=[int(i) for i in input().split()]
+a=[[int(i) for i in input().split()] for j in range(n)]
+
+row_max,col_max=0,0
+element_max=a[row_max][col_max]
+
+for i in range(n):
+    for j in range(m):
+        if element_max<a[i][j]:
+            element_max=a[i][j]
+            row_max,col_max=i,j
+print(row_max,col_max)
+
+
+#Soroka
+import random
+a=[[random.randint(10,99) for i in range(10)]for i1 in range(10)]
+for i in range(10):
+    print(*a[i])
+b=[max(a[i]) for i in range(10)]
+b.sort()
+b.reverse()
+for i in range(10):
+    for i1 in range(10):
+        if(a[i][i1]==b[0]):
+            print(i)
+            print(i1)
+        else:
+            continue
