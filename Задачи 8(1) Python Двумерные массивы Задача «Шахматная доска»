@@ -78,3 +78,37 @@ for row in a:
     print(' '.join(row))
 
 
+#Lysenko
+s=[x for x in input().split(' ')]
+d=int(s[0])
+b=int(s[1])
+a = []
+for r in range(d): 
+    a.append([])
+    if r%2==0:
+        for c in range(b):
+            if c%2==0:
+                a[r].append(".")
+            else:
+                a[r].append("*")
+    else:
+        for c in range(b):
+            if c%2==0:
+                a[r].append("*")
+            else:
+                a[r].append(".")
+for i in range(d):
+    print("".join(a[i]))
+    
+    
+#Sidorov
+n,m=[int(i) for i in input().split()]
+a=[["."  for i in range(m)] for i in range (n)]
+
+for i in range(n):
+    for j in range(m):
+        if ((i==0 or i%2==0) and j%2!=0) or (i%2!=0 and j%2==0):
+            a[i][j]="*"
+        
+for element in a:
+    print(" ".join(element))
