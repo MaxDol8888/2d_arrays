@@ -11,3 +11,22 @@ for row in sp:
 m=int(input())
 n=int(input())
 print([[i*6+j for j in range(m)] for i in range(n)])
+
+
+#Sholin
+a = [[i for i in range(m,m+6,1)] for m in range (0,36,6) ]
+for i in range(6):
+    print(*a[i])
+    
+    
+#Soroka
+import random
+n=random.randint(1,10)
+m=random.randint(1,10)
+print("n = "+str(n))
+print("m = "+str(m))
+a=[[i1 for i1 in range(i-m,i,1)]for i in range(0+m,n*m+1,m)]
+for i in range(n):
+    print(*a[i])
+    
+    
