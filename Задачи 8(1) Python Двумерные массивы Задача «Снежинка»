@@ -109,3 +109,18 @@ for i in range(n):
     mas[i][i]='*'
 for gav in mas:
     print(''.join(gav))
+
+
+#Sidorov
+n=int(input())
+p=n//2
+a=[["." for i in range(n)] for i in range(n)]
+for i in range(n):
+    for j in range(n):
+        a[i][i]="*"
+        a[n-i-1][i]="*"
+        a[i][p]="*"
+        a[p][j]="*"
+        
+for row in a:
+    print(" ".join(row))
