@@ -6,3 +6,19 @@ for row in sp:
     print(*row)
     
     
+#Soroka
+import random
+n=random.randint(1,10)
+m=random.randint(1,10)
+print("n = "+str(n))
+print("m = "+str(m))
+a=[[i*j for i in range(m)] for j in range(n)]
+for i in range(n):
+    print(*a[i])
+    
+    
+#Dydenko
+m=9
+n=9
+F=[[ i * j for j in range(m+1)] for i in range(n+1)]
+print(*F)
