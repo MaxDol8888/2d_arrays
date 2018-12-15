@@ -97,3 +97,15 @@ for i in range(n):
     for j in range(n):
         print(a[i][j],end=' ')
     print()
+
+
+#Sergienko
+n = int(input())
+mas = [['.'] * n for i in range(n)]
+for i in range(n):
+    mas[n // 2][i] = '*'
+    mas[i][n // 2] = '*'
+    mas[i][n - i - 1] = '*'
+    mas[i][i]='*'
+for gav in mas:
+    print(''.join(gav))
