@@ -10,3 +10,29 @@ for row in sp:
 m=int(input())
 n=int(input())
 print([[ i+0 for j in range(m)] for i in range(n)])
+
+
+#Soroka
+import random
+n=random.randint(1,10)
+m=random.randint(1,10)
+print("n = "+str(n))
+print("m = "+str(m))
+a=[[i1 for i in range(n)]for i1 in range(m)]
+for i in range(m):
+    print(*a[i])
+    
+    
+#Sholin
+a = [[ (str(m) + " " ) * 6 ] for m in range (5) ]
+for i in range(5):
+    print(*a[i])
+    
+    
+#Dydenko
+m=9
+n=9
+F=[[ i for n in range(m)] for i in range(n)]
+print(F)
+for row in F:
+    print(*row)
