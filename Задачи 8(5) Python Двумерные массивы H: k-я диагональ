@@ -1,0 +1,11 @@
+#Hapilin
+n= int(input())
+sp = [[int(j) for j in input().split()] for i in range(n)]
+k = int(input())
+for m in range(n):
+    for z in range(n):
+        if m == z  and m + k < n and m+k >= 0:
+            print(sp[m+k][z],end =" ")
+            
+            
+            
