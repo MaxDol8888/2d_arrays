@@ -1,0 +1,17 @@
+#Hapilin
+def IsSymmetric(n):
+    sp = [[int(j) for j in input().split()] for i in range(n)]
+    schet = int(0)
+    for k in range(n):
+        for z in range(n):
+            if sp[k][z] == sp[z][k] and k!=z:
+                schet += 1
+    print(schet)
+    return(schet)
+n=int(input())
+if IsSymmetric(n) == n*n - n:
+    print("YES")
+else:
+    print("NO")
+    
+    
