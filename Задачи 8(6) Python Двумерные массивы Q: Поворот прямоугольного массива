@@ -1,0 +1,13 @@
+#Hapilin (nedorabotan!)
+a = []
+m = int(input())
+n = int(input())
+a = [[int(i) for i in input().split()] for j in range(m)]
+for i in range(m):
+    for j in range(n):
+        if j>i:
+            t = a[i][j]
+            a[i][j] = a[j][i]
+            a[j][i] = t
+for row in a:
+    print(*row)
