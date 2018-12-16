@@ -11,3 +11,18 @@ for i in range(m):
             a[j][i] = t
 for row in a:
     print(*row)
+
+
+#Netyaga
+def Rotate(n,m):
+#    k = [[int(input()) for i in range(m)] for j in range(n)]
+    k = [[int(i) for i in input().split()] for j in range(n)]
+    k = list(zip(*reversed(k)))
+    return(k)
+
+n, m = map(int, input().split())
+kk = Rotate(n,m)
+#kk = Rotate(int(input()), int(input())
+for i in range(len(kk)):
+    print(*kk[i])
+
