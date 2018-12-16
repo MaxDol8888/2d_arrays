@@ -1,0 +1,13 @@
+#Netyaga
+def Rotate(n,m):
+    #k = [[int(input()) for i in range(m)] for j in range(n)]
+    k = [[int(i) for i in input().split()] for j in range(n)]
+    k = list(zip(*reversed(k)))
+    return(k)
+
+kk = Rotate(int(input()), int(input()))
+for i in range(len(kk)):
+    print(*kk[i])
+    
+    
+    
