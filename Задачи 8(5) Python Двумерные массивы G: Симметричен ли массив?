@@ -44,3 +44,32 @@ n = int(input())
 A = [[int(i) for i in input().split()] for j in range(n)]
 print(IsSymmetric(n, A))
 
+
+#Netyaga
+def IsSymmetric(n, A):
+    k = []
+    k1 = []
+    for i in range(n-1):
+        k.append(A[i][(i+1):])
+    for i in range(n-1):
+        k1.append(A[-(i+1)][:-(i+1)])
+    las = [k1[0][-1]]
+    k1.reverse()
+    for i in range(len(k1)):
+        for j in range(n-2):
+            k1[i].append('*')
+    kk = list(map(list,zip(*k1)))
+    kk.append(las)
+    for i in kk:
+        for j in range(i.count('*')):
+            kk[kk.index(i)].remove('*')
+    if (len(kk[-1]) == 1) and (len(kk[-2]) == 1):
+        kk.pop(-1)
+    if kk == k:
+        return(True)
+    else:
+        return(False)
+n = int(input())
+#A = [[int(input()) for i in range(n)] for j in range(n)]
+A = [[int(i) for i in input().split()] for j in range(n)]
+print(IsSymmetric(n, A))
