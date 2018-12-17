@@ -1,0 +1,52 @@
+#Hapilin
+n = int(input())
+a = int(-1)
+b= int(0)
+z = [["0"]*n for j in range(n)]
+if n%2 == 1:
+    for i in range(n):
+        if i <= n//2:
+            a+=1
+            b = int(0)
+            for j in range(n):
+                if j < n//2:
+                    z[i][j]=a+b
+                    b+=1
+                elif j >= n//2:
+                    z[i][j] = a+b
+                    b-=1
+        elif i > n//2:
+            a-=1
+            b = int(0)
+            for j in range(n):
+                if j < n//2:
+                    z[i][j] = a+b
+                    b += 1
+                elif j >= n//2:
+                    z[i][j] = a+b
+                    b -= 1
+else:
+    for i in range(n):
+        if i < n//2:
+            a+=1
+            b = int(0)
+            for j in range(n):
+                if j <= n//2 - 1:
+                    z[i][j] = a+b
+                    b += 1
+                elif j >= n//2:
+                    b-=1
+                    z[i][j] = a+b
+        elif i >= n//2:
+            b = int(0)
+            for j in range(n):
+                if j <= n//2 - 1:
+                    z[i][j] = a+b
+                    b += 1
+                elif j >= n//2:
+                    b-=1
+                    z[i][j] = a+b
+            a-=1
+for row in z:
+    print(*row)
+    
