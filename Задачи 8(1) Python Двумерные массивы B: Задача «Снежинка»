@@ -148,3 +148,4 @@ for i in range(n):
         a[i][pol]='*'
 for i in range(n):
     print(*a[i])
+
