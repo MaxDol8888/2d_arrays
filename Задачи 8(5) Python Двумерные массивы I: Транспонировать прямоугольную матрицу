@@ -1,0 +1,19 @@
+#Hapilin
+def transpose(sp):
+    sp1 = []
+    for k in range(m):
+        sp1.append([])
+    r = int(0)
+    c = int(0)
+    while r < m:
+        while c < n:
+            sp1[r].append(sp[c][r])
+            c += 1
+        c = int(0)
+        r+=1
+    for strok in sp1:
+        print(*strok) 
+n,m = [int(i) for i in input().split()]
+sp = [[i for i in input().split()] for j in range(n)]
+transpose(sp)
+
