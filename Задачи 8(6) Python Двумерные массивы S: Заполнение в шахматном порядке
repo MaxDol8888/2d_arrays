@@ -5,3 +5,19 @@ matrix = [[str(0) if (((i+j) % 2) == 0) else str(next(l)) for j in range(n)] for
 matrix = '\n'.join(' '.join(ln) for ln in matrix)
 print(matrix)
 
+
+#Hapilin
+n,m = [int(i) for i in input().split()]
+z= int(1) 
+a = [["0"]*m for i in range(n)]
+for i in range(n):
+    if i%2 == 0:
+        for j in range(0,m,2):
+            a[i][j] = z
+            z+=1
+    elif i%2 == 1:
+        for j in range(1,m,2):
+            a[i][j] = z
+            z+=1
+for row in a:
+    print(*row)
