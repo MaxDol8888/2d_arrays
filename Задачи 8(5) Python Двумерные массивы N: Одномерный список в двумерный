@@ -1,0 +1,20 @@
+#Hapilin
+n,m = [int(i) for i in input().split()]
+sp = [int(i) for i in input().split()]
+sp1 = []
+for k in range(n):
+    sp1.append([])
+a = int(0)
+b = int(0)
+while a < 2:
+    while a == 0 and b < m:
+        sp1[a].append(sp[b])
+        b+=1
+    while a == 1 and b >= m and b < n*m:
+        sp1[a].append(sp[b])
+        b+=1
+    a += 1
+for row in sp1:
+    print(*row)
+    
+    
