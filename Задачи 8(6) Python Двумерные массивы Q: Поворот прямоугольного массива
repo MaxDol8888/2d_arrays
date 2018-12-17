@@ -1,4 +1,4 @@
-#Hapilin (nedorabotan!)
+#Hapilin V.1.0 (nedorabotan!)
 a = []
 m = int(input())
 n = int(input())
@@ -13,6 +13,55 @@ for row in a:
     print(*row)
 
 
+#Hapilin V.2.0
+def rotate(sp):
+    sp1 = []
+    for k in range(m):
+        sp1.append([])
+    r = int(0)
+    c = int(0)
+    while r < m:
+        while c < n:
+            sp1[r].append(sp[c][r])
+            c += 1
+        c = int(0)
+        r+=1
+    for strok in range(len(sp1)):
+        sp1[strok] = sp1[strok][::-1]
+    for kok in sp1:
+        print(*kok)    
+n,m = [int(i) for i in input().split()]
+sp = [[i for i in input().split()] for j in range(n)]
+rotate(sp)
+
+#Hapilin V.2.0 RAZBOR
+def rotate(sp):
+    sp1 = []
+    for k in range(m):
+        sp1.append([])
+    print(sp1)###
+    r = int(0)
+    c = int(0)
+    while r < m:
+        while c < n:
+            sp1[r].append(sp[c][r])
+            c += 1
+        print(sp1)###
+        c = int(0)
+        r+=1
+    print(sp1)###    
+    for strok in range(len(sp1)):
+        sp1[strok] = sp1[strok][::-1]
+        print(sp1)###
+    print(sp1)###    
+    for kok in sp1:
+        print(*kok)
+    print(sp1)###     
+n,m = [int(i) for i in input().split()]
+sp = [[i for i in input().split()] for j in range(n)]
+rotate(sp)
+print(*sp)###
+
 #Netyaga
 def Rotate(n,m):
 #    k = [[int(input()) for i in range(m)] for j in range(n)]
@@ -26,3 +75,19 @@ kk = Rotate(n,m)
 for i in range(len(kk)):
     print(*kk[i])
 
+### Dopolnenie dlia ponimanija ###
+n, m = map(int, input().split())
+k = [[int(i) for i in input().split()] for j in range(n)]
+for i in range(len(k)):
+    print(*reversed(k[i])) 
+# OR #
+n, m = map(int, input().split())
+k = [[int(i) for i in input().split()] for j in range(n)]
+for i in range(len(k)):
+    k[i].reverse()
+    print(*k[i])
+# OR #
+k = [2, 4, 5]
+k.reverse()
+print(*k)
+    
