@@ -10,4 +10,23 @@ for i in range(len(kk)):
     print(*kk[i])
     
     
-    
+#Hapilin
+def rotate(sp):
+    sp1 = []
+    for k in range(n):
+        sp1.append([])
+    r = int(0)
+    c = int(0)
+    while r < n:
+        while c < n:
+            sp1[r].append(sp[c][r])
+            c += 1
+        c = int(0)
+        r+=1
+    for strok in range(len(sp1)):
+        sp1[strok] = sp1[strok][::-1]
+    for kok in sp1:
+        print(*kok)
+n = int(input())
+sp = [[i for i in input().split()] for j in range(n)]
+rotate(sp)
