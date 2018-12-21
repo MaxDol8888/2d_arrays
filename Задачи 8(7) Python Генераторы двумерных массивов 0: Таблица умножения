@@ -24,3 +24,15 @@ F=[[ i * j for j in range(m+1)] for i in range(n+1)]
 print(*F)
 for row in F:
     print(*row)
+
+
+#Alina
+a=[]
+m=int(input())
+n=int(input())
+a=[[0]*m for i in range (n)]
+for i in range(n):
+    for j in range(m):
+        a[i][j] = i * j
+for row in a :
+    print(*row)
