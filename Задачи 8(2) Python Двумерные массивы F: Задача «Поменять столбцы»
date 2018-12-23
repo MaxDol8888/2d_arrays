@@ -34,3 +34,23 @@ for x in range(m):
 for row in a:
     print(' '.join([str(a) for a in row]))
 
+
+#Sidorov
+from random import randrange
+def swap_columns(a, i, j):
+    for row in a:
+        row[i], row[j] = row[j], row[i]
+    return a
+
+n, m = [int(k) for k in input().split()]
+a = [[randrange(1, 10) for i in range(m)] for j in range(n)]
+
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
+    
+i, j = [int(k) for k in input().split()]
+
+for row in swap_columns(a, i, j):
+    print(' '.join([str(i) for i in row]))
+
+
