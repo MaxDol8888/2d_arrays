@@ -1,0 +1,14 @@
+#Hapilin
+n,m = [int(i) for i in input().split()]
+a = [['0']*m for i in range(n)]
+for i in range(n):
+    for j in range(m):
+        if j>i:
+            a[i][j] = i
+        else:
+            a[i][j]=j
+a.reverse()
+for row in a:
+    print(*row)
+
+
