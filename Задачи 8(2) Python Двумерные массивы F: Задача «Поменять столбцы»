@@ -54,3 +54,50 @@ for row in swap_columns(a, i, j):
     print(' '.join([str(i) for i in row]))
 
 
+#Soroka
+import random
+def swap_columns(a,i,j):
+    c=[]
+    d=[]
+    for n1 in range(n):
+        for n2 in range(m):
+            if(n2==i):
+                c.append(a[n1][n2])
+            elif(n2==j):
+                d.append(a[n1][n2])
+            else:
+                continue
+    print("")
+    #print(*c)
+    #print(*d)
+    print("")
+    sch=-1
+    for n1 in range(n):
+        sch+=1
+        for n2 in range(m):
+            if(n2==i):
+                a[n1][n2]=d[sch]
+            elif(n2==j):
+                a[n1][n2]=c[sch]
+            else:
+                continue
+    return a
+n=random.randint(5,9)
+m=random.randint(5,9)
+print("n = "+str(n))
+print("m = "+str(m))
+i=random.randint(0,m-1)
+j=random.randint(0,m-1)
+while(i==j):
+    i=random.randint(0,m-1)
+    j=random.randint(0,m-1)
+print("i = "+str(i))
+print("j = "+str(j))
+a=[[random.randint(10,30) for i in range(m)]for i1 in range(n)]
+for al in range(n):
+    print(*a[al])
+b=swap_columns(a,i,j)
+for al1 in range(n):
+    print(*b[al1])
+    
+    
