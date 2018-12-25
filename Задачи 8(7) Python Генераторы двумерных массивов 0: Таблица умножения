@@ -1,10 +1,16 @@
-#Hapilin
+#Hapilin V.1
 n = int(input())
 m = int(input())
 sp = [[i*j for j in range(m)] for i in range(n)]
 for row in sp:
     print(*row)
-    
+
+#Hapilin V.2
+n,m = [int(i) for i in input().split()]
+a = [[int(i*j) for j in range(m)] for i in range(n)]
+for row in a:
+    print(*row)
+ 
     
 #Soroka
 import random
