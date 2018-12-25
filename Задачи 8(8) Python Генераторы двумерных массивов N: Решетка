@@ -6,3 +6,18 @@ for row in sp:
     print(*row)
     
     
+#Alina
+a=[] 
+m=int(input()) 
+n=int(input()) 
+a=[[0]*m for i in range (n)] 
+for i in range(n): 
+    for j in range(m):
+        if i%2!=0 :
+            a[i][j] = 1
+        elif (i+j)%2:
+            a[i][j] = 0
+        else:
+            a[i][j] = 1
+for row in a : 
+    print(*row)
