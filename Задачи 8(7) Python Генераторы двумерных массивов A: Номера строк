@@ -45,3 +45,15 @@ for i in range(m):
      for j in range(n):
           print(i,end=' ')
      print()
+
+
+#Alina
+a=[] 
+m=int(input()) 
+n=int(input()) 
+a=[[0]*m for i in range (n)] 
+for i in range(n): 
+    for j in range(m): 
+        a[i][j] = i
+for row in a : 
+    print(*row)
