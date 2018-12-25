@@ -101,3 +101,23 @@ for al1 in range(n):
     print(*b[al1])
     
     
+#Dydenko
+from random import randrange
+print("Размеры массива")
+m=int(input())
+n=int(input())
+
+gg=[[randrange(1, 10) for i in range(m)] for j in range(n)]
+for row in gg:
+    print(' '.join([str(elem) for elem in row]))
+
+print("Номера свапа столбов")
+tt=int(input())
+ll=int(input())
+for i in range (n):
+    for j in range (m):
+        iiii=gg[i][tt]        ### OR gg[i][tt], gg[i][ll] = gg[i][ll], gg[i][tt] ###
+        gg[i][tt]=gg[i][ll]
+        gg[i][ll]=iiii
+for x in gg:
+    print(' '.join([str(xx) for xx in x]))
