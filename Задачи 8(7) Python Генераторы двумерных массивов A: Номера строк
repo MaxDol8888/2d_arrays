@@ -36,3 +36,12 @@ F=[[ i for n in range(m)] for i in range(n)]
 print(F)
 for row in F:
     print(*row)
+
+
+#Lysenko
+n=int(input())
+m=int(input())
+for i in range(m):
+     for j in range(n):
+          print(i,end=' ')
+     print()
