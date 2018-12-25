@@ -11,3 +11,13 @@ for row in sp:
 m=int(input())
 n=int(input())
 print([[ j*5+i for j in range(m)] for i in range(n)])
+
+
+#Lysenko
+n=int(input())
+m=int(input())
+ki=[ [j*n+i for j in range(m)] for i in range(n)]
+for i in range(len(ki)):
+     print(*ki[i])
+     
+     
