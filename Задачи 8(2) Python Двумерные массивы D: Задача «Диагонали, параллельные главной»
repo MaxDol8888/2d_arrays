@@ -36,3 +36,12 @@ for row in a:
     print(' '.join([str(elem) for elem in row]))
 
 
+#Soroka
+import random
+n=random.randint(0,10)
+print("n = "+str(n))
+a=[[abs(i - j) for j in range(n)] for i in range(n)]
+for i in range(n):
+    print(*a[i])
+    
+    
