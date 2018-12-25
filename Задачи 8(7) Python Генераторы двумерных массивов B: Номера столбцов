@@ -47,3 +47,13 @@ for i in range(m):
      print()
      
      
+#Alina
+a=[] 
+m=int(input()) 
+n=int(input()) 
+a=[[0]*m for i in range (n)] 
+for i in range(n): 
+    for j in range(m): 
+        a[i][j] = j
+for row in a : 
+    print(*row)
