@@ -30,3 +30,14 @@ for i in range(n):
     print(*a[i])
     
     
+#Lysenko
+n=int(input())
+m=int(input())
+h=0
+for i in range(m):
+     for j in range(n):
+          print(h,end=' ')
+          h+=1
+     print()
+     
+     
