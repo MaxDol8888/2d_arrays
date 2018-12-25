@@ -12,3 +12,17 @@ for row in a:
     print(*row)
 
 
+#Redkach
+n=int(input())
+mas=[[i+j for j in range(n)]for i in range(n)]
+for i in range(n):
+    for j in range(n):
+        if j>=i:
+            mas[i][j]=i
+        else:
+            mas[i][j]=j
+mas=mas[::-1]
+for row in mas:
+    print(*row)
+    
+    
