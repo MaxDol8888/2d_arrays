@@ -5,3 +5,13 @@ a = int(0)
 sp = [[i + n*j for j in range(m)] for i in range(n-1,-1,-1)]
 for row in sp:
     print(*row)
+
+
+#Lysenko
+n=int(input())
+m=int(input())
+ki=[ [j*n+i for j in range(m)] for i in range(n)]
+for i in range(len(ki)):
+     print(*ki[len(ki)-1-i])
+     
+     
