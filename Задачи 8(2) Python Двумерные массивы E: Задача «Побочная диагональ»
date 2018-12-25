@@ -48,3 +48,25 @@ a = [[0] * (n - i - 1) + [1] + [2] * i for i in range(n)]
 for row in a:
     print(' '.join([str(elem) for elem in row]))
 
+
+#Soroka
+import random
+n=random.randint(5,10)
+print("n = "+str(n))
+a=[[0 for i in range(n)] for i1 in range(n)]
+nach=n
+for i in range(n):
+    nach-=1
+    a[i][nach]=1
+sch=0
+poz=n
+for i in range(1,n,1):
+    sch+=1
+    for i1 in range(sch):
+        poz-=1
+        a[i][poz]=2
+    poz=n
+for i in range(n):
+    print(*a[i])
+    
+    
