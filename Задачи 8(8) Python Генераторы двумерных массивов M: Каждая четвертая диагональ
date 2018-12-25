@@ -1,0 +1,11 @@
+#Hapilin
+n,m = [int(i) for i in input().split()]
+a = [["*"]*m for i in range(n)]
+for i in range(n):
+    for j in range(m-1,-1,-1):
+        if abs(n-i-j - 1)%4 == 0:
+            a[i][j]=1
+        else:
+            a[i][j]=0
+for row in a:
+    print(*row)
