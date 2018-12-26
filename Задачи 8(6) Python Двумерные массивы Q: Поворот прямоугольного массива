@@ -91,3 +91,42 @@ k = [2, 4, 5]
 k.reverse()
 print(*k)
     
+
+###http://www.cyberforum.ru/python-beginners/thread2230591.html
+
+#regio1961
+def list_rot90( data, times = 1 ):
+    rot_data = []
+    for t in range( times ):
+        m = len( data )
+        n = len( data[0] )
+        rev_data = data[ : : -1]
+        rot_data = [ [rev_data[j][i] for j in range( m ) ] 
+                                     for i in range( n ) ];
+        data = rot_data                           
+    return rot_data
+   
+ 
+matrix = [ [ 8, 2, 3 ], 
+           [ 9, 5, 4 ] ]
+for s in matrix:
+    print( *s )  
+print( "" )   
+rot_matrix = list_rot90( matrix ) 
+for s in rot_matrix:
+    print( *s )    
+print( "" )    
+rot_matrix2 = list_rot90( matrix, 2 ) 
+for s in rot_matrix2:
+    print( *s )
+
+#Black Fregat
+def transposed(matrix):
+    return [[*col] for col in zip(*matrix)]
+ 
+def rot90:
+    return list(map(reversed, transposed(matrix)))
+
+# Или в одно действие
+def rot90(matrix):
+    return[list(reversed(col)) for col in zip(*matrix)]
