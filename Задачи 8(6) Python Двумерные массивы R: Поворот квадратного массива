@@ -30,3 +30,36 @@ def rotate(sp):
 n = int(input())
 sp = [[i for i in input().split()] for j in range(n)]
 rotate(sp)
+
+
+### http://www.cyberforum.ru/python/thread1672515.html
+# For QUAD
+
+from random import randrange
+a=[]
+N=int(input('Введите количство строк и столбцов в матрице: '))
+
+'''for i in range (N):
+    a.append([])
+    for m in range (N):
+        k=int(input('Введите число a[%d][%d]: '%(i+1,m+1)))
+        a[i].append(k)
+print('\nИсходная матрица: ')
+for i in range (N):
+    print(a[i])'''
+
+
+a = [[randrange(1, 10) for i in range(N)] for j in range(N)] 
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
+print()
+for j in range(N - 1, -1, -1):
+    for i in a:
+        print(i[j], end=" ")
+    print()
+    
+print()
+
+for row in a:
+    print(' '.join([str(elem) for elem in row]))
+
