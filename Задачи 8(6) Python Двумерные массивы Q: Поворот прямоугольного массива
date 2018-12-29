@@ -163,3 +163,40 @@ print()
 for row in a:
     print(' '.join([str(elem) for elem in row]))
 
+
+### C++
+### http://practice.keyfire.ru/blog/dvuhmernye-massivy-na-c/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    int a[n][m];
+    int b[m][n];
+    // заполнение
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+        }
+    }
+    // обработка
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            b[j][n - 1 - i] = a[i][j];
+        }
+    }
+    // вывод
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+# And other
+
+### https://gist.github.com/erudite-individual/7d195fbcfe2c73b4542d
