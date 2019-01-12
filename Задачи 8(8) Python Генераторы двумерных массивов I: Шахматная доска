@@ -62,3 +62,10 @@ for i in range(n):
         a.append(s)       
 for i in a:
     print(*i)
+
+
+#Valushko
+m, n = map(int, input().split())
+matrix = [[str((i+j+1) % 2) for j in range(n)] for i in range(m)]
+matrix = '\n'.join(' '.join(l) for l in matrix)
+print(matrix)
