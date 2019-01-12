@@ -38,3 +38,15 @@ for i in cc:
     print(*i)
         
         
+#Lysenko
+n, m = map(int, input().split())
+k=[]
+for i in range(m*n):
+    k.append(i+1)
+for h in range(n):
+    if h%2==0:
+        print(*(k[m*h:m+m*h]))
+    else:
+        print(*list(reversed(k[m*h:m+m*h])))
+        
+
