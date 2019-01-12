@@ -6,4 +6,14 @@ for row in sp:
     print(*row)
     
     
-    
+#Lysenko
+s=[x for x in input().split(' ')]
+n=int(s[0])
+m=int(s[1])
+for i in range(n):
+        k=i
+        for j in range(m):
+                print(k,end=' ')
+                k+=1
+        print()
+
