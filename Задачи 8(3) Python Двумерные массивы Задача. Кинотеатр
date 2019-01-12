@@ -28,3 +28,26 @@ row = next((i+1 for i, line in enumerate(rows) if pat in line), 0)
  
 print(row) 
 
+
+#Soroka
+import random
+n=random.randint(5,12)
+m=random.randint(8,12)
+k=random.randint(2,6)
+print("n = "+str(n))
+print("m = "+str(m))
+print("k = "+str(k))
+a=[[str(random.randint(0,1)) for i in range(m)]for i1 in range(n)]
+rad=0
+for i in range(n):
+    print(*a[i])
+for i in range(n):
+    st=''.join(a[i])
+    kol=st.count('0'*k)
+    if(kol>=1):
+        rad=i+1
+        break
+    else:
+        continue
+print(rad)
+
