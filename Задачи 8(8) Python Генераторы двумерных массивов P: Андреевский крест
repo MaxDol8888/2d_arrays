@@ -15,3 +15,17 @@ for i in range(n):
 for row in mas:
     print(*row)
 
+
+#Valushko
+n = int(input())
+matrix = [[int(i-j)for j in range(n)] for i in range(n)]
+for i in range(n):
+    for j in range(n):
+        if i==j:
+            matrix[i][j]=1
+        elif (j+i==n-1):
+            matrix[i][j]=1
+        else:
+            matrix[i][j]=0      
+for row in matrix:
+    print(' '.join([str(elem) for elem in row]))
