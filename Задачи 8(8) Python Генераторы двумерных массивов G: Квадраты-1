@@ -24,3 +24,17 @@ for row in mas:
     print(*row)
     
     
+#Lysenko
+n=int(input())
+k=1
+for i in range(n):
+        for j in range(k):
+                print(k-1,end=' ')
+        p=k-1
+        for m in range(n-k):
+                p+=1
+                print(p,end=' ')
+        k+=1
+        print()
+        
+
