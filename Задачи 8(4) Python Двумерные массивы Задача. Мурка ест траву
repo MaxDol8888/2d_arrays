@@ -45,3 +45,38 @@ s = 0
 moves(0,N-1)
 print(s)
 
+
+#Soroka
+import random
+n=5
+a=[[random.randint(10,40) for i1 in range(n)]for i in range(n)]
+kolorii=a[-1][0]
+y=n-1
+x=0
+while(True):
+    if(x==n-1 and y==0):
+        break
+    else:
+        x=x
+    x+=1
+    if(x==n):
+        for i in range(0,y):
+            kolorii+=a[i][-1]
+        break
+    else:
+        y-=1
+        if(y==-1):
+            for i1 in range(x,n,1):
+                kolorii+=a[y+1][i1]
+                break
+        else:
+            y+=1
+            if(a[y][x]>a[y-1][x-1]):
+                kolorii+=a[y][x]
+            elif(a[y][x]<a[y-1][x-1]):
+                 y-=1
+                 x-=1
+                 kolorii+=a[y][x]    
+for i in a:
+    print(*i)
+print(kolorii)
