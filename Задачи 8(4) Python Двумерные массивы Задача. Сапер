@@ -16,3 +16,45 @@ for i in range(n):
             print('*', end=' ')
     print()
 
+
+#Soroka
+import random
+n=random.randint(5,10)
+m=random.randint(5,10)
+k=random.randint(5,10)
+print("n =",n,"m =",m,"k =",k)
+kor=[]
+for i in range(k):
+    kor.append([random.randint(1,m),random.randint(1,n)])
+a=[[0 for i in range(n)]for i1 in range(m)]
+for i in kor:
+    print(*i)
+    a[i[0]-1][i[1]-1]='*'
+def func():
+    j=random.randint(1,9)
+    if(j==9):
+        return '.'
+    else:
+        return j
+for i in range(m):
+    for i1 in range(n):
+        if(i1==0):
+            if(a[i][i1+1]!='*'):
+                a[i][i1+1]=func()
+            else:
+                continue
+        elif(i1==n-1):
+            if(a[i][i1-1]!='*'):
+                a[i][i1-1]=func()
+            else:
+                continue
+        else:
+            if(a[i][i1-1]!='*'):
+                a[i][i1-1]=func()
+            else:
+                if(a[i][i1+1]!='*'):
+                    a[i][i1+1]=func()
+                else:
+                    l=0
+for i in a:
+    print(*i)
