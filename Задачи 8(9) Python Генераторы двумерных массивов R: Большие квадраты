@@ -1,0 +1,27 @@
+#Lysenko
+a=int(input())
+n=int(input())
+d=[]
+f=[]
+g=[]
+for i in range(a//4+1):
+    d.append(1)
+    d.append(1)
+    d.append(0)
+    d.append(0)
+for i in range(a//4+1):
+    f.append(0)
+    f.append(0)
+    f.append(1)
+    f.append(1)
+for i in range(n):
+    g.append(d[0:a])
+    g.append(d[0:a])
+    g.append(f[0:a])
+    g.append(f[0:a])
+for i in range(n):
+    for j in range(a):
+        print(g[i][j],end=' ')
+    print()
+    
+    
