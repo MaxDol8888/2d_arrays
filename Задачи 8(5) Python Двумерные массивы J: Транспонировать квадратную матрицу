@@ -17,3 +17,31 @@ n = int(input())
 sp = [[i for i in input().split()] for j in range(n)]
 transpose(sp)
 
+
+#Soroka
+import random
+def Transpose(A):
+   for i in list(zip(*A)):
+       print(*i)
+n=random.randint(3,10)
+print("n =",n)
+a=[[random.randint(10,99) for i in range(n)]for i1 in range(n)]
+for i in a:
+    print(*i)
+print("")
+Transpose(a)
+
+
+#Hapilin (for Q: Поворот прямоугольного массива) 
+a = []
+m = int(input())
+n = int(input())
+a = [[int(i) for i in input().split()] for j in range(m)]
+for i in range(m):
+    for j in range(n):
+        if j>i:
+            t = a[i][j]
+            a[i][j] = a[j][i]
+            a[j][i] = t
+for row in a:
+    print(*row)
