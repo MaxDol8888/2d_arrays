@@ -73,3 +73,31 @@ n = int(input())
 #A = [[int(input()) for i in range(n)] for j in range(n)]
 A = [[int(i) for i in input().split()] for j in range(n)]
 print(IsSymmetric(n, A))
+
+
+#Soroka
+import random
+def IsSymmetric(A):
+    b=[]
+    r=-1
+    for i in range(n-1,-1,-1):
+        r+=1
+        b.append(A[r][i])
+    for i in range(1,len(b),1):
+        if(b[i]==b[i-1]):
+            continue
+        else:
+            return False
+    return True
+n=random.randint(3,6)
+print("n =",n)
+A=[]
+for i in range(n):
+    s=input()
+    A.append(s.split(' '))
+if(IsSymmetric(A)):
+    print("YES")
+else:
+    print("NO")
+    
+    
