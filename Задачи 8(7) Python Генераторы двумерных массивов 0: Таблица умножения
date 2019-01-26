@@ -12,7 +12,7 @@ for row in a:
     print(*row)
  
     
-#Soroka
+#Soroka v. 1.0
 import random
 n=random.randint(1,10)
 m=random.randint(1,10)
@@ -21,7 +21,17 @@ print("m = "+str(m))
 a=[[i*j for i in range(m)] for j in range(n)]
 for i in range(n):
     print(*a[i])
-    
+
+
+#Soroka v. 2.0
+import random
+n=random.randint(3,6)
+m=random.randint(3,6)
+print("n =",n,"m =",m)
+a=[[(i+1)*(i1+1) for i in range(n)]for i1 in range(m)]
+for i in a:
+    print(*i)
+
     
 #Dydenko
 m=9
