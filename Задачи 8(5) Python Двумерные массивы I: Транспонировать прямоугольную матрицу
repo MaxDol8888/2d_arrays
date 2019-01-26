@@ -17,3 +17,26 @@ n,m = [int(i) for i in input().split()]
 sp = [[i for i in input().split()] for j in range(n)]
 transpose(sp)
 
+
+#Soroka
+import random
+def Transpose(A):
+   sp=[]
+   for i in A:
+       sp.append(i)
+   sp=list(zip(*sp))
+   b=[]
+   for i in range(n):
+       b.append(sp[i])
+   return b
+n=random.randint(3,10)
+m=random.randint(3,10)
+print("n =",n,"m =",m)
+a=[[random.randint(10,99) for i in range(n)]for i1 in range(m)]
+for i in a:
+    print(*i)
+b=Transpose(a)
+print("")
+for i in b:
+    print(*i)
+
