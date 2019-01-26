@@ -1,0 +1,27 @@
+#Soroka
+import random
+def SwapDiagonals(A):
+    fDiagonal,secDiagonal=[],[]
+    r=-1
+    for i in range(n-1,-1,-1):
+        r+=1
+        fDiagonal.append(A[r][i])
+    for i in range(n):
+        secDiagonal.append(A[i][i])
+    r=-1
+    for i in range(n-1,-1,-1):
+        r+=1
+        A[r][i]=secDiagonal[r]
+    for i in range(n):
+        A[i][i]=fDiagonal[i]
+    for i in A:
+        print(*i)
+n=random.randint(3,6)
+print("n =",n)
+A=[]
+for i in range(n):
+    s=input()
+    A.append(s.split(' '))
+SwapDiagonals(A)
+
+
