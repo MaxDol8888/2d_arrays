@@ -18,3 +18,22 @@ for row in sp1:
     print(*row)
     
     
+#Soroka
+import random
+def trans(b,n,m):
+    sch=-1
+    a=[["0" for i in range(n)]for i1 in range(m)]
+    for i in range(m):
+        for i1 in range(n):
+            sch+=1
+            a[i][i1]=b[sch]
+    return a
+            
+n=random.randint(3,7)
+m=random.randint(3,7)
+array=[random.randint(10,50) for i in range(n*m)]
+print("n =",n,"m = ",m,"\n",*array)
+print("")
+a=trans(array,n,m)
+for i in a:
+    print(*i)
